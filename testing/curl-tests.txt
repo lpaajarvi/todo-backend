@@ -1,0 +1,33 @@
+
+curl http://localhost:8080/api
+
+
+Tällä lisätään yksittäinen taski
+
+// ei toimi enää
+curl -H "Content-type: application/json" -d "{\"title\": \"Testitaski curlilla\", \"minutes\": 45, \"due\": \"2021-01-15\", \"isCompleted\": \"false\", \"isArchived\": \"false\", \"subtasks\": []}" http://localhost:8080/api/
+
+
+
+Tällä taski jolla 2 subtaskia:
+// ei toimi enää
+curl -H "Content-type: application/json" -d "{\"title\": \"Testitaski subtaskeineen curlilla\", \"minutes\": 25, \"due\": \"2021-01-15\", \"subtasks\": [{\"title\": \"subtask1testi\", \"minutes\": 50, \"isCompleted\": \"false\" }, {\"title\": \"subtask2\", \"minutes\": 30,\"isCompleted\": \"false\"}]}" http://localhost:8080/tasks
+
+Tällä taski jolla 2 eri mittaista subtaskia joista toinen on tehty: (eikun ei anna mahdollisuutta, tekee automaattisesti falseksi vissiin tehdyt kun validoi)
+// ei toimi enää
+curl -H "Content-type: application/json" -d "{\"title\": \"Nonni tehty tasta\", \"minutes\": 25, \"due\": \"2022-01-05\", \"isCompleted\": \"false\", \"isArchived"\: \"true"\, \"subtasks\": [{\"title\": \"ykkonentehty\", \"minutes\": 50, \"isCompleted\": \"true\" }, {\"title\": \"kakkonen\", \"minutes\": 10,\"isCompleted\": \"false\"}]}" http://localhost:8080/api/
+
+
+
+// delete task
+
+curl -X DELETE http://localhost:8080/api/4
+
+
+
+// unarchive task with id 12 (a=archive c=complete +=add -=remove )
+curl -X PUT http://localhost:8080/api/put/a-12
+// mark task task (makes all its possible subtasks complted as well) with id 6 completed
+curl -X PUT http://localhost:8080/api/put/c+6
+
+

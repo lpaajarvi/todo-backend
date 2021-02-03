@@ -1,0 +1,105 @@
+TODO APP DATABASE CONTENT CREATION MYSQL COMMANDS FOR FRESH INSTALL
+
+Authors Elias Puukari & Lauri Pääjärvi
+Last update on 2020-12-20
+
+These database entries also work as user test cases for this app.
+
+Test cases are grouped as follows:
+
+Group A: Adding tasks
+Group B: Adding tasks with subtasks
+Group C: Miscellaneous (do not work properly as user cases)
+Group D: Archive and complete tasks
+Group E: Deleting tasks
+Group F: Changing minute values
+Group G: Changin due dates
+
+LIST OF CASES:
+
+TEST CASE A1
+Add one task with minutes and due values
+
+TEST CASE A2
+Add task with minutes, without due date
+
+TEST CASE A3
+Add task with due date, without minutes
+
+TEST CASE A4
+Add task without due date, without minutes
+
+TEST CASE A5
+Add task marked as done
+
+TEST CASE B6
+Add one task with minutes and due values and three subtasks
+
+TEST CASE B7
+Add task with minutes, without due, with two subtasks
+
+TEST CASE B8
+Add task with due date, without minutes and four subtasks
+
+TEST CASE B9
+Add task without due date, without minutest and six subtasks
+
+TEST CASE B10
+Add task with minutes, due and six subtasks with minutes and four of them marked as done
+
+TEST CASE C11
+Add several archived tasks with different type of values
+
+TEST CASE C12
+Add several subtasks to archived tasks
+
+TEST CASE C13
+Add new task with many subtasks
+
+TEST CASE D14
+Add new task without subtasks, with pointed test case ARCHIVE THIS TASK
+
+TEST CASE D15
+Add new task without subtasks, with pointed test case COMPLETE THIS TASK
+
+TEST CASE D16
+Add new task without subtasks, with pointed test case UNARCHIVE THIS TASK
+
+TEST CASE D17
+Add new task without subtasks, with pointed test case UN-COMPLETE
+
+TEST CASE D18
+Add new task with subtasks, with pointed test case complete subtasks
+
+TEST CASE E19
+Add new task to delete it
+
+TEST CASE E20
+Add new task (with subtasks) and delete it
+
+TEST CASE E21
+Add new task with subtasks, delete some subtasks
+
+TEST CASE E22
+Add new task with subtasks, delete all subtasks
+
+TEST CASE F23
+Add new task, change time
+
+TEST CASE F24
+Add new task with subtasks, change time
+
+TEST CASE F25
+Add new task with subtasks, change time for subtasks
+
+TEST CASE G26
+Change due date from task where it is null
+
+TEST CASE G27
+Change due date from task where it is already defined
+
+TEST CASE G28
+Remove due date from task where it is already defined
+
+TEST CASE G29
+Remove due date from task where it is already defined
