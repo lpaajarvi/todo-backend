@@ -5,6 +5,8 @@ School project by Elias Puukari and Lauri Pääjärvi
 Easiest way to test his app is by going to
 https://tamk-4a00ez62-3001-group02.herokuapp.com/
 
+Link to apps Front Ends source code: https://github.com/lpaajarvi/todo-frontend/
+
 Known bugs:
 
 Transactions in database/crudpromises.js do not work like they should. The rollbacks
